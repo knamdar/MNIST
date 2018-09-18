@@ -16,6 +16,7 @@ tsimgURL = "http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz"
 chunk_size=1024
 
 ################################################
+r=requests.get(trlabURL, stream=True)
 
 size=int(r.headers['content-length'])
 filename=trlabURL.split ('/') [-1]
